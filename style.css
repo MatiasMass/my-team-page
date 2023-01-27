@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+}
+
+.main{
+    width: 60%;
+    /* background-color: red; */
+    margin: 2rem auto;
+    height: 100%;
+}
+
+.main .content{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem;
+}
+
+.main .content .title-container, .main .content .info-container{
+    width: 50%;
+}
+
+.main .content .title-container .title{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 26px;
+}
+.main .content .info-container h3{
+    font-size: 15px;
+}
+
+.main .content .info-container p{
+    font-size: 15px;
+}
+
+.main .team-container{
+    display: grid;
+    /* grid-auto-rows: 150px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    /* padding: 2rem; */
+    height: 100%;
+}
+
+.main .team-container .team-member{
+    background-color: #fff;
+    /* padding: 1rem; */
+    width: 100%;
+    /* margin: 1rem 0; */
+    height: 120%;
+}
+
+.main .team-container .team-member .profile{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    height: 70%;
+}
+
+.main .team-container .team-member .profile h4{
+    writing-mode: vertical-rl;
+    font-size: 12px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.main .team-container .team-member .profile img{
+    width: 90%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.main .team-container .team-member:nth-child(2),
+.main .team-container .team-member:nth-child(5){
+    /* justify-self: flex-end; */
+    /* display: grid; */
+    margin-top: 5rem;
+    /* grid-row-start: span 2; */
+    /* background-color: blue; */
+}
+
+.main .team-container .team-member h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px){
+    .main .team-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main .content{
+        flex-direction: column;
+    }
+
+    .main .content .title-container, .main .content .info-container{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .main .team-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+.main .team-container .team-member:nth-child(2),
+.main .team-container .team-member:nth-child(5){
+    /* justify-self: flex-end; */
+    /* display: grid; */
+    margin-top: 0rem;
+    /* grid-row-start: span 2; */
+    /* background-color: blue; */
+}
+
+}
